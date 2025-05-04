@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Flight Information Card -->
+    <com.skyscanner.backpack.view.BpkCardView
+        android:id="@+id/flightCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/arrivalCard"
+        app:cornerStyle="large">
+
+        <!-- Flight Number Text -->
+        <com.skyscanner.backpack.view.BpkText
+            android:id="@+id/flightNumber"
+            android:text="Flight Number: AB123"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:style="@style/bpkTextHeading1" />
+
+        <!-- Departure Information -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.skyscanner.backpack.view.BpkText
+                android:text="Departure: NYC"
+                android:style="@style/bpkTextHeading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.skyscanner.backpack.view.BpkText
+                android:text="Departure Time: 10:00 AM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </com.skyscanner.backpack.view.BpkCardView>
+
+    <!-- Arrival Information Card -->
+    <com.skyscanner.backpack.view.BpkCardView
+        android:id="@+id/arrivalCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/flightCard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cornerStyle="large">
+
+        <!-- Arrival Information -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.skyscanner.backpack.view.BpkText
+                android:text="Arrival: LON"
+                android:style="@style/bpkTextHeading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.skyscanner.backpack.view.BpkText
+                android:text="Arrival Time: 12:30 PM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </com.skyscanner.backpack.view.BpkCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
